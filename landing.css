@@ -1,0 +1,55 @@
+body{
+  background: url(http://www.metalinjection.net/wp-content/uploads/2014/07/space-metal.jpg);
+}
+
+
+.flex-container{
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*border: 3px solid red;*/
+    width: 500px;
+    height: 400px;
+    justify-content: space-between;
+    margin:0 auto;
+      margin-top:40px;
+}
+h1{
+  text-align: center;
+  color: white;
+  font-family:Space Mono;
+}
+
+.flex-item{
+  justify-content: space-between;
+    width: 400px;
+    height: 300px;
+
+    /*border: 1px solid lightblue;*/
+    margin: 45px;
+
+}
+
+
+form{
+  color:white;
+  text-align: center;
+}
+
+input{
+  margin: 15px;
+  height: 40px;
+  width:  200px;
+  border-radius: 5px;
+  background-color: #E6E6E6;
+}
+button{
+  background-color:#2d8afc;
+  margin: 15px;
+  height: 45px;
+  width:  218px;
+  border-radius: 5px;
+
+
+
+}
