@@ -25,37 +25,54 @@
   height: 20px;
   border: 3px solid black;
   position: absolute;
-  margin-left:13px;
+  margin-left:0px;
   top: 0;
   text-align: center;
 
   bottom: 0;
-  margin-top: 350px;
+  margin-top: 330px;
   /*left:0;*/
 
 
 }
 
+
+
+
+
 .roll-blocks{
   border: 1px solid black;
-  width :70px;
+  width : 70px;
  /* margin-left:10px;*/
   height: 150px;
-  position: relative;
-  margin-left:95px;
- /* right: 0;*/
-}
-.roll-blocks2{
-  border: 1px solid black;
-  width :80px;
-  height: 150px;
-  position: relative;
+  position: absolute;
+  margin-left:110px;
   margin-top: 500px;
-  margin-left: 600px;
-  /*right: 0;*/
- /*top: 650px;*/
+  right :0;
 
 }
+/*.roll-blocks2{
+  border: 1px solid black;
+  width : 70px;
+  height: 150px;
+  position: relative;
+  margin-top: 300px;
+  margin-left: 500px;
+}testing another type of code*/
+
+.roll-blocks2{
+  border: 1px solid black;
+  width : 70px;
+ /* margin-left:10px;*/
+  height: 150px;
+  position: absolute;
+  margin-left:110px;
+  margin-bottom: 500px;
+  right :0;
+
+}
+
+
 
 
 
