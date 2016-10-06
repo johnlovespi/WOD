@@ -3,20 +3,27 @@
   width: 500px;
   height: 700px;
   border: 3px solid black;
-
-
-
-
 }*/
 
 .flex-container {
   display: flex;
   width: 0 auto;
-  height: 650px;
+  height: 550px;
   border: 3px solid black;
-  background: url();
+  /*background: url();*/
   background: cover;
-   position: relative;
+  position: relative;
+  flex-direction: column;
+
+}
+
+#flex-item{
+  height: 1px;
+  border: 1px solid black;
+  width: 0 auto;
+  padding-top:30px;
+  margin:3px;
+
 }
 
 
@@ -28,50 +35,53 @@
   margin-left:0px;
   top: 0;
   text-align: center;
-
   bottom: 0;
-  margin-top: 330px;
+  margin-top: 270px;
+
   /*left:0;*/
-
-
 }
 
 
-
-
-
+/*
 .roll-blocks{
   border: 1px solid black;
   width : 70px;
- /* margin-left:10px;*/
-  height: 150px;
+ margin-left:10px;
+  height: 25px;
   position: absolute;
-  margin-left:110px;
-  margin-top: 500px;
+margin-left: 10px;
+  margin-top: 400px;
   right :0;
+  border-radius: 20px;
 
-}
-/*.roll-blocks2{
+}*/
+
+.roll-blocks-generic{
   border: 1px solid black;
   width : 70px;
-  height: 150px;
-  position: relative;
-  margin-top: 300px;
-  margin-left: 500px;
-}testing another type of code*/
+ /* margin-left:10px;*/
+  height: 25px;
+  position: absolute;
+/*  margin-left: 10px;*/
+  left: 2000px;
+  border-radius: 20px;
 
+}
+
+/*
 .roll-blocks2{
   border: 1px solid black;
   width : 70px;
- /* margin-left:10px;*/
-  height: 150px;
+  margin-left:10px;
+  height: 50px;
   position: absolute;
-  margin-left:110px;
-  margin-bottom: 500px;
+  margin-left: 10px;
+  margin-bottom: 50px;
   right :0;
+  border-radius: 20px;
 
 }
-
+*/
 
 
 
