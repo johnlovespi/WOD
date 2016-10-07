@@ -25,6 +25,9 @@ $(document).ready(function() {
       break;
     }
   })
+
+  testCollision();
+
 });
 
 
@@ -56,30 +59,43 @@ function createblocks(startSpeed) {
 }
 
 
-function collision(){
+// function collision(){
 
-    var player  = $(".player");
-    var player  = { height: player.height(), width : player.width()
-    };
 
-    var rollBlock = $(".rollBlock");
-    var rollBlock = {height: rollBlock.height(), width : rollBlock.width()
-    };
+//  };
 
-function testCollision(position1, size1, position2, size2) {
-        if (((position1.left + size1.width)  > position2.left) &&
-            ((position1.top  + size1.height) > position2.top)  &&
-            ((position2.left + size2.width)  > position1.left) &&
-            ((position2.top  + size2.height) > position1.top))
 
-          {
+function testCollision(enemy) {
+  // var player  = $(".player").position().top;
+  var player = {};
+  player.top = $(".player").position().top;
+  player.left = $(".player").position().left;
 
-            triggerExplosion(position1.top, position1.left);
-        }
-    }
+  var rollBlock = {};
+  rollBlock.top = enemy.position().top;
+  rollBlock.left = enemy.position().left;
+
+  if (((player.left + size1.width)  > rollBlock.left) &&
+      ((player.top  + size1.height) > rollBlock.top)  &&
+      ((rollBlock.left + size2.width)  > player.left) &&
+      ((rollBlock.top  + size2.height) > player.top))
+  {
+    console.log('HIT!');
+    triggerExplosion(player.top, player.left);
+  }
 }
-// testCollision()
 
+function collisonDettection() {
+  setInterval(function() {
+    $('.rollBlock').each(function(){
+       testCollision($(this));
+    })
+    }, 10);
+}
+
+
+
+// testCollision();
 
 
 //   if ((Math.abs(playerTop - newBlockTop)) < 20 && (Math.abs(playerLeft - newBlockLeft)) < 50){
