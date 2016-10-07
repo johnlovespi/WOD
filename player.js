@@ -31,7 +31,7 @@ $(document).ready(function() {
 
 function animateBlock(speed){
   const width = window.innerWidth;
-  const $newBlock = $('<div />',{class:'roll-blocks-generic , roll-blocks-generic2'});
+  const $newBlock = $('<div />',{class:'rollBlock'});
   $newBlock
     .css({
       left: width,
@@ -43,45 +43,55 @@ function animateBlock(speed){
 }
 
 
-// function createblocks(startSpeed) {
-//   let speed = startSpeed;
+function createblocks(startSpeed) {
+  let speed = startSpeed;
 
-//   const timerNumber = setInterval( function(){
-//     // reset to startSPeed if we've dropped below zero, otherwise,
-//     // leave it alone
-//     speed = (speed<0) ? startSpeed : speed;
-//     console.log(speed)
-//     return animateBlock(speed-=20)
-//   }, 900);
-// }
+  const timerNumber = setInterval( function(){
+    // reset to startSPeed if we've dropped below zero, otherwise,
+    // leave it alone
+    speed = (speed<0) ? startSpeed : speed;
+    console.log(speed)
+    return animateBlock(speed-=20)
+  }, 900);
+}
 
 
 function collision(){
 
-var playerTop = $('.player').position().top;
-var playerLeft = $('.player').postion().left;
+    var player  = $(".player");
+    var player  = { height: player.height(), width : player.width()
+    };
 
-var newBlockTop = $('.roll-blocks-generic').postion().top;
-var newBlockLeft = $('.roll-blocks-generic').postion().left;
+    var rollBlock = $(".rollBlock");
+    var rollBlock = {height: rollBlock.height(), width : rollBlock.width()
+    };
 
+function testCollision(position1, size1, position2, size2) {
+        if (((position1.left + size1.width)  > position2.left) &&
+            ((position1.top  + size1.height) > position2.top)  &&
+            ((position2.left + size2.width)  > position1.left) &&
+            ((position2.top  + size2.height) > position1.top))
 
-// var playerTop = player.position().top;
-// var playerLeft = player.position().left;
+          {
 
-// var newBlockTop = newBlock.postion().top;
-// var newBlockLeft = newBlock.postion().left;
-
-
-  if ((Math.abs(playerTop - newBlockTop)) < 20 && (Math.abs(playerLeft - newBlockLeft)) < 50){
-  console.log('hit');
-  }else{
-  console.log('****');
+            triggerExplosion(position1.top, position1.left);
+        }
+    }
 }
+// testCollision()
 
-}
 
-  // var timerId = setInterval(draw, 1000);
-collision();
+
+//   if ((Math.abs(playerTop - newBlockTop)) < 20 && (Math.abs(playerLeft - newBlockLeft)) < 50){
+//   console.log('hit');
+//   }else{
+//   console.log('hitq');
+// }
+
+// }
+
+//   // var timerId = setInterval(draw, 1000);
+// collision();
 // setInterval(collision, 1000);
 
 
