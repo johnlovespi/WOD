@@ -18,10 +18,10 @@
 }
 
 #flex-item{
-  height: 1px;
+  height: 40px;
   border: 1px solid black;
   width: 0 auto;
-  padding-top:30px;
+  padding-top:10px;
   margin:3px;
 
 }
@@ -32,13 +32,12 @@
   height: 20px;
   border: 3px solid black;
   position: absolute;
-  margin-left:0px;
-  top: 0;
+  margin-left:5px;
   text-align: center;
-  bottom: 0;
-  margin-top: 270px;
-
-  /*left:0;*/
+  /*bottom: 250px;*/
+ /* margin-top: 270px;*/
+  top: 275px;
+  left:0
 }
 
 
@@ -65,8 +64,25 @@ margin-left: 10px;
 /*  margin-left: 10px;*/
   left: 2000px;
   border-radius: 20px;
-
+  top:0;
 }
+
+
+
+/*.roll-blocks-generic2{
+  border: 1px solid black;
+  width : 70px;
+
+  height: 40px;
+  position: absolute;
+
+  left: 2000px;
+  border-radius: 20px;
+
+}*/
+
+/* margin-left:10px;*/
+/*  margin-left: 10px;*/
 
 /*
 .roll-blocks2{
