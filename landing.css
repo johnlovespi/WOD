@@ -1,6 +1,9 @@
 body{
   background: url(http://www.metalinjection.net/wp-content/uploads/2014/07/space-metal.jpg);
+  background: cover;
+
 }
+
 
 
 .flex-container{
@@ -44,6 +47,7 @@ input{
   border-radius: 5px;
   background-color: #E6E6E6;
 }
+
 button{
   background-color:#2d8afc;
   margin: 15px;
@@ -51,6 +55,19 @@ button{
   width:  218px;
   border-radius: 5px;
  font-size: 20px;
+}
+
+
+@media only screen and (device-width: 768px) {
+  /* For general iPad layouts */
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+  /* For portrait layouts only */
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+  /* For landscape layouts only */
 }
 
 

@@ -1,24 +1,17 @@
 console.log('working');
-
-
 $(document).ready(function() {
-  createblocks(6000);
-
   $(document).keydown(function(e){
     switch (e.which) {
-    case 38://
-    var p = Math.floor(parseInt($('.player').css('top')));
-        if( p >= 0){
-        $('.player').stop().animate({top: '-=120'});
-        //left arrow key
-          // console.log('working');
-            // $(".player").top('-310');
+    case 38://key press will print out a string of "K"
+    var upKey = Math.floor(parseInt($('.player').css('top')));
+        if( upKey >= 20){
+        $('.player').stop().animate({top: '-=30'}, 10);
         }
-        // console.log($('.player').position());
-        break;
+      break;
      case 40:
-     if(parseInt($('.player').css('top')) < 430){
-        $('.player').stop().animate({top: '+=120'}); //right arrow key
+     var  downKey = Math.floor(parseInt($('.player').css('top')));
+     if( downKey < 490){
+        $('.player').stop().animate({top: '+=30'}, 10); //right arrow key
         // if($('.player') > ){
             // console.log($('.player').position());
         }
@@ -26,24 +19,47 @@ $(document).ready(function() {
     }
   })
 
-  testCollision();
+  //bring down hight for body
+  // ad imgs
+  function deathStar(){
+      const $deathStar = $('<div />',{class:'deathStar'});
+      $deathStar
+      .css({
+        left: width,
+         top: '10px',
+        })
+        .animate({left: '100px'},1000)
+        .appendTo($('body'));
+
+  }
+
+      // $(this).appendTo('body')
+
+
+      // $(this).css({right: '49'});
+
+createblocks(6090);
+collisonDetection();
+// delineate();
+// deathStar();
 
 });
 
-
-
 function animateBlock(speed){
-  const width = window.innerWidth;
+    const width = window.innerWidth;
   const $newBlock = $('<div />',{class:'rollBlock'});
   $newBlock
     .css({
       left: width,
-      top: Math.floor(Math.random()*450),
+      top: Math.floor(Math.random()*480),
       backgroundColor:('red')
     })
     .animate({left: -100},speed, 'linear')
-    .appendTo($('body'))
+    .appendTo($('.flex-container'))
 }
+
+
+
 
 
 function createblocks(startSpeed) {
@@ -52,145 +68,87 @@ function createblocks(startSpeed) {
   const timerNumber = setInterval( function(){
     // reset to startSPeed if we've dropped below zero, otherwise,
     // leave it alone
-    speed = (speed<0) ? startSpeed : speed;
+    speed = (speed < 0) ? startSpeed : speed;
     console.log(speed)
-    return animateBlock(speed-=20)
-  }, 900);
+    return animateBlock(speed-=10)
+  }, 300);
 }
 
 
-// function collision(){
-
-
-//  };
-
-
+/// Collision Function !!
 function testCollision(enemy) {
-  // var player  = $(".player").position().top;
+
   var player = {};
   player.top = $(".player").position().top;
   player.left = $(".player").position().left;
+  player.height = parseInt($(".player").css('height'));
+  player.width = parseInt($(".player").css('width'));
 
   var rollBlock = {};
   rollBlock.top = enemy.position().top;
   rollBlock.left = enemy.position().left;
+  rollBlock.height = parseInt(enemy.css('height'));
+  rollBlock.width = parseInt(enemy.css('width'));
 
-  if (((player.left + size1.width)  > rollBlock.left) &&
-      ((player.top  + size1.height) > rollBlock.top)  &&
-      ((rollBlock.left + size2.width)  > player.left) &&
-      ((rollBlock.top  + size2.height) > player.top))
+  if (((player.left + player.width)  >= rollBlock.left) &&
+      ((player.top  + player.height) >= rollBlock.top)  &&
+      ((rollBlock.left + rollBlock.width)  > player.left) &&
+      ((rollBlock.top  + rollBlock.height) > player.top))
   {
-    console.log('HIT!');
-    triggerExplosion(player.top, player.left);
+    console.log('HIT!');//this will happen to hit
+      //counter to check need varilbes to count :thought
+      //if statment to run connditon
+      // triggerExplosion(player.top, player.left);
   }
 }
 
-function collisonDettection() {
+//Check if taget Got hit every 50 milliseconds
+
+function collisonDetection() {
   setInterval(function() {
     $('.rollBlock').each(function(){
        testCollision($(this));
     })
     }, 10);
 }
+collisonDetection();
 
 
 
-// testCollision();
-
-
-//   if ((Math.abs(playerTop - newBlockTop)) < 20 && (Math.abs(playerLeft - newBlockLeft)) < 50){
-//   console.log('hit');
-//   }else{
-//   console.log('hitq');
+// var locate = window.location.search
+// function delineate(str) {
+// theleft = str.indexOf("=") + 1;
+// theright = str.lastIndexOf("&");
+// return(str.substring(theleft, theright));
 // }
-
-// }
-
-//   // var timerId = setInterval(draw, 1000);
-// collision();
-// setInterval(collision, 1000);
+// var name = delineate(locate);
 
 
-// function getPositions(elem) {
-
-//        var pos, width, height;
-//        pos = $( elem ).position();
-//        width = $( elem ).width();
-//        height = $( elem ).height();
-//        return [ [ pos.left, pos.left + width ], [ pos.top, pos.top + height ] ];
-//    }
-// })
-// }
 
 
-// $(function  move() {
-// setInterval(function() {
+// var s = function deathStar(e){
+//   //  const width = window.innerWidth;
+//   const $deathStar = $('<div />', {class:'deathStar'});
+//   $deathStar
+//     .css({
+//       left: width})
+//   //     // top:  Math.floor(Math.random()*40),
+//   //     backgroundColor:('red')
+//     // })
 
-//       randomTop();
-
-//       // $('.roll-blocks').css({top: + randomTop()});
-//       // console.log($('.roll-blocks').width())
-//   });
-// }, 3000);
-// });
-
-
-// make a function to give div randome top
-// function randomTop(){
-//   var randTopbox = Math.floor(Math.random()*100);
-//    var randTopbox2 = Math.floor(Math.random()*100);
-
-//    $('.roll-blocks').css({'margin-top': randTopbox+'%'});
-//    $('.roll-blocks2').css({'margin-top': randTopbox2+'%'});
-
-// }
-// });
-
-// setInterval(randomTop, 1000);
-
-// function collisin(){
-
-//   if (Math.abs(playerTop - fireTop) < 60 && Math.abs(playerLeft - fireLeft) < 60)
+//   // document.select('')
+//     .animate({left: -100}, 100)
+//     .appendTo($('body'))
 // }
 
 
 
 
 
-// function hitColi(){
-//   // var player = ($(".player").position());
-//   var player = parseInt($('.player').css('top'));
-//   var player = parseInt($('.player').css('top'));
 
-//   var enemy = parseInt($('.roll-blocks-generic').css('top'));
-//   var enemy = parseInt($('.roll-blocks-generic').css('left'));
-//   // player = {x:5, y:5, width:20, hight:20};
-//   // var enemy = ($(".roll-blocks").position());
 
-//    // enemy = {x:15, y:15 , width: 70, hight:25};
-//   if( player.x < enemy.x + enemy.width &&
-//       player.x + player.width > enemy.x &&
-//       player.y < enemy.y + enemy.hight &&
-//       player.hight + player.y > enemy.y)
-//       {
-//       console.log('hit');
-//         }else {
-//       console.log('****');
-//     }
-//   }
-// hitColi();
-// });
 
-// if( player.x < enemy.x + enemy.width &&
-//       player.x + player.width > enemy.x &&
-//       player.y < enemy.y + enemy.hight &&
-//       player.hight + player.y > enemy.y)
-//       {
-//       console.log('hit');
-//         }else {
-//       console.log('****');
-//     }
-//   }
+
 
 
 

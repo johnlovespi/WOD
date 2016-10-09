@@ -1,28 +1,38 @@
-/*body{
-  display: flex;
-  width: 500px;
-  height: 700px;
+body{
+ /* display: flex;*/
+  position: fixed;
+/*  width: 0 auto;*/
+ /* height: 700px;*/
   border: 3px solid black;
-}*/
+  flex-direction: column;
+  text-align:center;
+  background:url(https://media.giphy.com/media/12ARUDmaLhRmHS/giphy.gif);
+
+}
 
 .flex-container {
- /* display: flex;*/
+
+  display: flex;
+  margin: 10px;
+  width:  1150px;
   width: 0 auto;
   height: 550px;
   border: 3px solid black;
-  /*background: url();*/
+  background: url();
   background: cover;
   position: relative;
-  flex-direction: column;
+  flex-direction: row;
 
 }
 
 #flex-item{
   height: 40px;
   border: 1px solid black;
-  width: 0 auto;
+ /* width: 0 auto;*/
   padding-top:10px;
-  margin:3px;
+
+  /*flex-direction: column;*/
+
 
 }
 
@@ -41,19 +51,17 @@
 }
 
 
-/*
-.roll-blocks{
-  border: 1px solid black;
-  width : 70px;
- margin-left:10px;
-  height: 25px;
+.deathStar{
+  background: url(http://vignette3.wikia.nocookie.net/star-wars-canon/images/7/7d/Death_Star_detail.png/revision/latest?cb=20151216212148);
+  width: 410px;
+  height: 400px;
+  /*border: 1px solid  ;*/
   position: absolute;
-margin-left: 10px;
-  margin-top: 400px;
-  right :0;
-  border-radius: 20px;
+  top:0;
+  right:0;
+/*  left:0;*/
 
-}*/
+}
 
 .rollBlock{
   border: 1px solid black;
@@ -62,12 +70,15 @@ margin-left: 10px;
   height: 25px;
   position: absolute;
 /*  margin-left: 10px;*/
-  left: 2000px;
+  /*left: 20px;*/
   border-radius: 20px;
   top:0;
 }
 
-
+p{
+  font-size: 20px;
+  color: white;
+}
 
 /*.roll-blocks-generic2{
   border: 1px solid black;
@@ -98,6 +109,21 @@ margin-left: 10px;
 
 }
 */
+
+
+
+
+@media only screen and (device-width: 768px) {
+  /* For general iPad layouts */
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+  /* For portrait layouts only */
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+  /* For landscape layouts only */
+}
 
 
 
