@@ -5,43 +5,61 @@ $(document).ready(function() {
     case 38://key press will print out a string of "K"
     var upKey = Math.floor(parseInt($('.player').css('top')));
         if( upKey >= 20){
-        $('.player').stop().animate({top: '-=30'}, 10);
+        $(".player").animate({top: '-=30'}, 10);
         }
       break;
      case 40:
      var  downKey = Math.floor(parseInt($('.player').css('top')));
      if( downKey < 490){
-        $('.player').stop().animate({top: '+=30'}, 10); //right arrow key
-        // if($('.player') > ){
-            // console.log($('.player').position());
-        }
-      break;
+        $(".player").animate({top: '+=30'}, 10);
+      }
+      // break;
+      // case 32:
+      // var bullets = (parseInt*)
     }
   })
 
   //bring down hight for body
   // ad imgs
-  function deathStar(){
+
+
+  const width = window.innerWidth;
       const $deathStar = $('<div />',{class:'deathStar'});
       $deathStar
       .css({
-        left: width,
-         top: '10px',
-        })
-        .animate({left: '100px'},1000)
-        .appendTo($('body'));
+          right: width,
+      })
+        $(".deathStar").animate({right: 100}, 25000)
+       $("deathStar").css({right: '1000px'});
 
-  }
+
 
       // $(this).appendTo('body')
-
-
       // $(this).css({right: '49'});
+
+////////////////////////////
+
+var locate = window.location.name
+
+function delineate(str) {
+  theleft = str.indexOf("=") + 1;
+  theright = str.lastIndexOf("&");
+return(str.substring(theleft, theright));
+}
+
+////////////////////////////
+
+
+
+
+
+
+
 
 createblocks(6090);
 collisonDetection();
-// delineate();
-// deathStar();
+delineate();
+deathStar();
 
 });
 
@@ -62,6 +80,7 @@ function animateBlock(speed){
 
 
 
+
 function createblocks(startSpeed) {
   let speed = startSpeed;
 
@@ -73,6 +92,26 @@ function createblocks(startSpeed) {
     return animateBlock(speed-=10)
   }, 300);
 }
+
+// function deathStar(){
+//    const width = window.innerWidth;
+//       // const $deathStar = $('<div />',{class:'deathStar'});
+//       // $deathStar
+//       // .css({
+//       //   left: width,
+//       //    // top: '10px',
+//       //   })
+//       //   .animate({left: -100},1000)
+//       //   .appendTo($('body'));
+//       $(".deathStar").animate({left: 90},1000)
+//         $("deathStar").css({left: '900px'});
+//   }
+
+
+
+
+
+
 
 
 /// Collision Function !!
@@ -115,13 +154,14 @@ collisonDetection();
 
 
 
-// var locate = window.location.search
+// var locate = window.location.name
+
 // function delineate(str) {
-// theleft = str.indexOf("=") + 1;
-// theright = str.lastIndexOf("&");
+//   theleft = str.indexOf("=") + 1;
+//   theright = str.lastIndexOf("&");
 // return(str.substring(theleft, theright));
 // }
-// var name = delineate(locate);
+
 
 
 

@@ -1,13 +1,12 @@
 body{
   background: url(http://www.metalinjection.net/wp-content/uploads/2014/07/space-metal.jpg);
   background: cover;
+  margin:0 auto;
+  background-repeat: no-repeat;
 
 }
-
-
-
 .flex-container{
-  display: flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     /*border: 3px solid red;*/
@@ -15,16 +14,41 @@ body{
     height: 400px;
     justify-content: space-between;
     margin:0 auto;
-      margin-top:40px;
+    margin-top:40px;
 }
 
 h1{
   text-align: center;
   color: white;
   font-family:Space Mono;
+
+
+  margin: 10px 0 0 130px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 30em;
+  animation: type 4s steps(60, end);
+}
+span{
+  animation: blink 1s infinite;
+}
+@keyframes type{
+  from { width: 0; }
 }
 
+@keyframes type2{
+  0%{width: 0;}
+  50%{width: 0;}
+  100%{ width: 100; }
+}
+
+@keyframes blink{
+  to{opacity: .0;}
+}
+
+
 .flex-item{
+
   justify-content: space-between;
     width: 400px;
     height: 300px;
