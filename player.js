@@ -39,14 +39,15 @@ $(document).ready(function() {
 ////////////////////////////
 
 
-var locate = window.location.search
 
-function delineate(str) {
-  theleft = str.indexOf("=") + 1;
-  theright = str.lastIndexOf("&");
-return(str.substring(theleft, theright));
-}
+// var locate = window.location.search
+// var form = $(".flex-item");
 
+
+
+
+
+// delineate();
 ////////////////////////////
 
 
@@ -56,9 +57,9 @@ return(str.substring(theleft, theright));
 
 
 
-createblocks(6090);
+createblocks(3050);
 collisonDetection();
-delineate();
+
 deathStar();
 
 });
@@ -69,10 +70,10 @@ function animateBlock(speed){
   $newBlock
     .css({
       left: width,
-      top: Math.floor(Math.random()*480),
+      top: Math.floor(Math.random()*530),
       backgroundColor:('red')
     })
-    .animate({left: -100},speed, 'linear')
+    .animate({left: -80},speed, 'linear')
     .appendTo($('.flex-container'))
 }
 
@@ -90,7 +91,7 @@ function createblocks(startSpeed) {
     speed = (speed < 0) ? startSpeed : speed;
     console.log(speed)
     return animateBlock(speed-=10)
-  }, 300);
+  }, 600);
 }
 
 // function deathStar(){

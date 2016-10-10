@@ -3,10 +3,10 @@ body{
   position: fixed;
 /*  width: 0 auto;*/
  /* height: 700px;*/
-  border: 3px solid black;
+ /* border: 3px solid black;*/
   flex-direction: column;
   text-align:center;
- /* background:url(https://media.giphy.com/media/12ARUDmaLhRmHS/giphy.gif);*/
+  background:url(https://media.giphy.com/media/12ARUDmaLhRmHS/giphy.gif);
 
 }
 
@@ -17,7 +17,7 @@ body{
   width:  1250px;
 /*  width: 0 auto;*/
   height: 550px;
-  border: 3px solid black;
+  /*border: 3px solid white;*/
 
   background: cover;
   position: static;
@@ -26,10 +26,13 @@ body{
 }
 
 #flex-item{
-  height: 40px;
-  border: 1px solid black;
+  height: 120px;
+  width: 300px;
+  border: 3px solid #9e000f;
  /* width: 0 auto;*/
-  padding-top:10px;
+  padding:8px;
+  border-radius: 4px;
+/*  padding-bottom: 5px;*/
 
   /*flex-direction: column;*/
 
@@ -38,22 +41,23 @@ body{
 
 
 div.player {
-  width: 200px;
+  width: 160px;
   height: 180px;
-  border: 3px solid  ;
+  border: 3px solid  none;
   position: relative;
   margin-left:5px;
   text-align: center;
   background: cover;
-  background-repeat: no-repeat;
+
+  /*background-repeat: no-repeat;*/
   /*bottom: 250px;*/
  /* margin-top: 270px;*/
   top: 275px;
   left:0;
+  background-repeat: no-repeat;
 
-  background-image:url(http://d2ydh70d4b5xgv.cloudfront.net/images/3/7/bandai-1-144-millenium-falcon-episode-7-the-force-awakens-kit-star-wars-f-s-649ab6a9b3e968e99152abd25f30084b.jpg);
+  background-image:url("MillenniumFalcon-Rt-MED.png");
 }
-
 
 .deathStar{
   background: url(http://vignette3.wikia.nocookie.net/star-wars-canon/images/7/7d/Death_Star_detail.png/revision/latest?cb=20151216212148);
@@ -69,12 +73,12 @@ div.player {
 }
 
 .rollBlock{
-  background:url(http://rview.reviewcentre.com/wp-content/uploads/2010/11/millenium-falcon.gif);
-  background: url();
-  border: 1px solid black;
-  width : 70px;
+ /* background:url(http://rview.reviewcentre.com/wp-content/uploads/2010/11/millenium-falcon.gif);*/
+  background-image: url("TIE-Fighter-LTSmall.png");
+  border: 1px solid #9e000f;
+  width : 60px;
  /* margin-left:10px;*/
-  height: 25px;
+  height: 8px;
   position: absolute;
 /*  margin-left: 10px;*/
   /*left: 20px;*/
@@ -83,8 +87,15 @@ div.player {
 }
 
 p{
-  font-size: 20px;
-  color: white;
+  font-size: 25px;
+  color: #9e000f;
+}
+input {
+  height: 20px;
+  float: right;
+  padding-right: 10px;
+  border-radius: 3px;
+
 }
 
 audio{
@@ -99,15 +110,15 @@ audio{
   /* For general iPad layouts */
 }
 
-@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+/*@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
   /* For portrait layouts only */
-}
+/*}*/
 
-@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+/*@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
   /* For landscape layouts only */
-}
-
-
+/*}
+*/
+/**/
 
 
 

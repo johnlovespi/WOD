@@ -16,6 +16,11 @@ body{
     margin:0 auto;
     margin-top:40px;
 }
+p{
+  font-size: 12px;
+  color:#2d8afc;
+  padding-left:90px;
+}
 
 h1{
   text-align: center;
@@ -23,11 +28,11 @@ h1{
   font-family:Space Mono;
 
 
-  margin: 10px 0 0 130px;
+  margin: 0px 0 0 0px;
   white-space: nowrap;
   overflow: hidden;
-  width: 30em;
-  animation: type 4s steps(60, end);
+  width: 12em;
+  /*animation: type 4s steps(1, end);*/
 }
 span{
   animation: blink 1s infinite;
@@ -60,6 +65,7 @@ span{
 
 
 form{
+  padding-top: 15px;
   color:white;
   text-align: center;
 }
@@ -86,13 +92,13 @@ button{
   /* For general iPad layouts */
 }
 
-@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+/*@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {*/
   /* For portrait layouts only */
-}
+/*}*/
 
-@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+/*@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {*/
   /* For landscape layouts only */
-}
+/*}*/
 
 
 
