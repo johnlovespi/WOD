@@ -3,12 +3,13 @@ $(document).ready(function() {
   $(document).keydown(function(e){
     switch (e.which) {
     case 38://key press will print out a string of "K"
+            // moves player up on Pressed K let
     var upKey = Math.floor(parseInt($('.player').css('top')));
         if( upKey >= 20){
         $(".player").animate({top: '-=30'}, 10);
         }
       break;
-     case 40:
+     case 40: // moves player down on Pressed down K let
      var  downKey = Math.floor(parseInt($('.player').css('top')));
      if( downKey < 490){
         $(".player").animate({top: '+=30'}, 10);
@@ -19,10 +20,9 @@ $(document).ready(function() {
     }
   })
 
-  //bring down hight for body
-  // ad imgs
 
 
+  //function to move deathStar to the right
   const width = window.innerWidth;
       const $deathStar = $('<div />',{class:'deathStar'});
       $deathStar
@@ -34,12 +34,12 @@ $(document).ready(function() {
 
 
 
-      // $(this).appendTo('body')
-      // $(this).css({right: '49'});
 
+       // submit form to next page
 ////////////////////////////
 
-var locate = window.location.name
+
+var locate = window.location.search
 
 function delineate(str) {
   theleft = str.indexOf("=") + 1;
@@ -164,22 +164,6 @@ collisonDetection();
 
 
 
-
-
-// var s = function deathStar(e){
-//   //  const width = window.innerWidth;
-//   const $deathStar = $('<div />', {class:'deathStar'});
-//   $deathStar
-//     .css({
-//       left: width})
-//   //     // top:  Math.floor(Math.random()*40),
-//   //     backgroundColor:('red')
-//     // })
-
-//   // document.select('')
-//     .animate({left: -100}, 100)
-//     .appendTo($('body'))
-// }
 
 
 
