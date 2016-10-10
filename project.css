@@ -74,7 +74,7 @@ div.player {
 
 .rollBlock{
  /* background:url(http://rview.reviewcentre.com/wp-content/uploads/2010/11/millenium-falcon.gif);*/
-  background-image: url("TIE-Fighter-LTSmall.png");
+  background-image:url("TIE-Fighter-LTSmall.png");
   border: 1px solid #9e000f;
   width : 60px;
  /* margin-left:10px;*/
