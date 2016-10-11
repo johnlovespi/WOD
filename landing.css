@@ -1,0 +1,106 @@
+body{
+  background: url(http://www.metalinjection.net/wp-content/uploads/2014/07/space-metal.jpg);
+  background: cover;
+  margin:0 auto;
+  background-repeat: no-repeat;
+
+}
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*border: 3px solid red;*/
+    width: 500px;
+    height: 400px;
+    justify-content: space-between;
+    margin:0 auto;
+    margin-top:40px;
+}
+p{
+  font-size: 12px;
+  color:#2d8afc;
+  padding-left:90px;
+}
+
+h1{
+  text-align: center;
+  color: white;
+  font-family:Space Mono;
+
+
+  margin: 0px 0 0 0px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 12em;
+  /*animation: type 4s steps(1, end);*/
+}
+span{
+  animation: blink 1s infinite;
+}
+@keyframes type{
+  from { width: 0; }
+}
+
+@keyframes type2{
+  0%{width: 0;}
+  50%{width: 0;}
+  100%{ width: 100; }
+}
+
+@keyframes blink{
+  to{opacity: .0;}
+}
+
+
+.flex-item{
+
+  justify-content: space-between;
+    width: 400px;
+    height: 300px;
+
+    /*border: 1px solid lightblue;*/
+    margin: 45px;
+
+}
+
+
+form{
+  padding-top: 15px;
+  color:white;
+  text-align: center;
+}
+
+input{
+  margin: 15px;
+  height: 40px;
+  width:  200px;
+  border-radius: 5px;
+  background-color: #E6E6E6;
+}
+
+button{
+  background-color:#2d8afc;
+  margin: 15px;
+  height: 45px;
+  width:  218px;
+  border-radius: 5px;
+ font-size: 20px;
+}
+
+
+@media only screen and (device-width: 768px) {
+  /* For general iPad layouts */
+}
+
+/*@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {*/
+  /* For portrait layouts only */
+/*}*/
+
+/*@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {*/
+  /* For landscape layouts only */
+/*}*/
+
+
+
+
+

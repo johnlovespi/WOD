@@ -1,0 +1,129 @@
+body{
+ /* display: flex;*/
+  position: fixed;
+/*  width: 0 auto;*/
+ /* height: 700px;*/
+ /* border: 3px solid black;*/
+  flex-direction: column;
+  text-align:center;
+  background:url(https://media.giphy.com/media/12ARUDmaLhRmHS/giphy.gif);
+
+}
+
+.flex-container {
+
+/*  display: flex;*/
+ /* margin: 10px;*/
+  width:  1250px;
+/*  width: 0 auto;*/
+  height: 550px;
+  /*border: 3px solid white;*/
+
+  background: cover;
+  position: static;
+  /*flex-direction: column;*/
+
+}
+
+#flex-item{
+  height: 120px;
+  width: 300px;
+  border: 3px solid #9e000f;
+ /* width: 0 auto;*/
+  padding:8px;
+  border-radius: 4px;
+/*  padding-bottom: 5px;*/
+
+  /*flex-direction: column;*/
+
+
+}
+
+
+div.player {
+  width: 160px;
+  height: 180px;
+  border: 3px solid  none;
+  position: relative;
+  margin-left:5px;
+  text-align: center;
+  background: cover;
+
+  /*background-repeat: no-repeat;*/
+  /*bottom: 250px;*/
+ /* margin-top: 270px;*/
+  top: 275px;
+  left:0;
+  background-repeat: no-repeat;
+
+  background-image:url("MillenniumFalcon-Rt-MED.png");
+}
+
+.deathStar{
+  background: url(http://vignette3.wikia.nocookie.net/star-wars-canon/images/7/7d/Death_Star_detail.png/revision/latest?cb=20151216212148);
+  width: 410px;
+  height: 400px;
+  /*border: 1px solid  ;*/
+  position: absolute;
+  /*top:0;*/
+  /*left:0;*/
+  right:0;
+  top:0;
+
+}
+
+.rollBlock{
+ /* background:url(http://rview.reviewcentre.com/wp-content/uploads/2010/11/millenium-falcon.gif);*/
+  background-image:url("TIE-Fighter-LTSmall.png");
+  border: 1px solid #9e000f;
+  width : 60px;
+ /* margin-left:10px;*/
+  height: 8px;
+  position: absolute;
+/*  margin-left: 10px;*/
+  /*left: 20px;*/
+  border-radius: 20px;
+  top:0;
+}
+
+p{
+  font-size: 25px;
+  color: #9e000f;
+}
+input {
+  height: 20px;
+  float: right;
+  padding-right: 10px;
+  border-radius: 3px;
+
+}
+
+audio{
+  display: none;
+}
+
+
+
+
+
+@media only screen and (device-width: 768px) {
+  /* For general iPad layouts */
+}
+
+/*@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+  /* For portrait layouts only */
+/*}*/
+
+/*@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+  /* For landscape layouts only */
+/*}
+*/
+/**/
+
+
+
+
+
+
+
+
