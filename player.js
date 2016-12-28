@@ -1,5 +1,30 @@
 console.log('working');
 $(document).ready(function() {
+
+  var formInfo = window.location.search;
+
+  function delineate(str) {
+  theLeft = str.indexOf("=") + 1;
+  theRight = str.lastIndexOf("&");
+var name=(str.substring(theLeft, theRight));
+  return name;
+}
+
+  var name = delineate(formInfo);
+  var username = $('.username')
+  // In order to carry username to next round (since it is on a serparate html file)
+  // I need to save the username in a secret form that will submit to the next page
+  // and can be displayed on the screen for round2 and round 3
+  username.attr("value", name).hide();
+  // Input the name that we pulled from the form into our name div so it will display
+  // on the screen
+  var nameBox = $('#name');
+  var player1 = nameBox.text();
+  nameBox.text(player1 + " " + name);
+
+
+
+
   $(document).keydown(function(e){
     switch (e.which) {
     case 38://key press will print out a string of "K"
@@ -16,22 +41,20 @@ $(document).ready(function() {
       }
       // break;
       // case 32:
-      // var bullets = (parseInt*)
+      // var blast = (parseInt($(".blast").)
     }
   })
 
 
 
   //function to move deathStar to the right
-  const width = window.innerWidth;
-      const $deathStar = $('<div />',{class:'deathStar'});
-      $deathStar
-      .css({
-          right: width,
-      })
-        $(".deathStar").animate({right: 100}, 25000)
-       $("deathStar").css({right: '1000px'});
-
+const width = window.innerWidth;
+  const $deathStar = $('<div />',{class:'deathStar'});
+    $deathStar
+    .css({
+      right: width,
+    })
+    $(".deathStar").animate({right: 700}, 30000)
 
 
 
@@ -44,25 +67,21 @@ $(document).ready(function() {
 // var form = $(".flex-item");
 
 
-
-
-
 // delineate();
 ////////////////////////////
 
+//this will pull userinformation from the url link
 
 
 
 
-
-
-
-createblocks(3050);
+createblocks(3100);
 collisonDetection();
 
 deathStar();
 
 });
+
 
 function animateBlock(speed){
     const width = window.innerWidth;
@@ -79,9 +98,6 @@ function animateBlock(speed){
 
 
 
-
-
-
 function createblocks(startSpeed) {
   let speed = startSpeed;
 
@@ -90,28 +106,9 @@ function createblocks(startSpeed) {
     // leave it alone
     speed = (speed < 0) ? startSpeed : speed;
     console.log(speed)
-    return animateBlock(speed-=10)
-  }, 600);
+    return animateBlock(speed-=20)
+  }, 450);
 }
-
-// function deathStar(){
-//    const width = window.innerWidth;
-//       // const $deathStar = $('<div />',{class:'deathStar'});
-//       // $deathStar
-//       // .css({
-//       //   left: width,
-//       //    // top: '10px',
-//       //   })
-//       //   .animate({left: -100},1000)
-//       //   .appendTo($('body'));
-//       $(".deathStar").animate({left: 90},1000)
-//         $("deathStar").css({left: '900px'});
-//   }
-
-
-
-
-
 
 
 
@@ -135,7 +132,8 @@ function testCollision(enemy) {
       ((rollBlock.left + rollBlock.width)  > player.left) &&
       ((rollBlock.top  + rollBlock.height) > player.top))
   {
-    console.log('HIT!');//this will happen to hit
+    //alert('HIT!');//this will happen on hit
+     console.log('hit');
       //counter to check need varilbes to count :thought
       //if statment to run connditon
       // triggerExplosion(player.top, player.left);
@@ -155,13 +153,7 @@ collisonDetection();
 
 
 
-// var locate = window.location.name
 
-// function delineate(str) {
-//   theleft = str.indexOf("=") + 1;
-//   theright = str.lastIndexOf("&");
-// return(str.substring(theleft, theright));
-// }
 
 
 

@@ -28,7 +28,7 @@ app.use(bodyParser.urlencoded({
 app.listen(PORT , ()=> console.log(`server here! listening on`, PORT ) )
 
 app.get('/showForm', (req,res)=>{
-  //console.log(req.query);
+  console.log(req.query);
   res.json(req.query)
 })
 
